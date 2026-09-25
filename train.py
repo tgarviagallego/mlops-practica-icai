@@ -6,7 +6,6 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 import joblib 
 import mlflow 
 import mlflow.sklearn 
-import dagshub
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
