@@ -13,6 +13,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: DVC and Python setup
+        uses: iterative/setup-dvc@v1
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: DVC Pull
+        env:
+          DAGSHUB_API_KEY: ${{ secrets.DAGSHUB_API_KEY }}
+        run: |
+          dvc remote modify origin --local access_key_id $DAGSHUB_API_KEY
+          dvc remote modify origin --local secret_access_key $DAGSHUB_API_KEY
+          dvc pull -r origin
+
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
