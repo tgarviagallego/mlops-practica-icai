@@ -16,8 +16,8 @@ stages:
       size: 2795
     - path: requirements.txt
       hash: md5
-      md5: 89c6cadc9efa0815d76431035fcd58e1
-      size: 100
+      md5: 9273e48d652aa0a68245e69215aa5281
+      size: 108
     - path: train.py
       hash: md5
       md5: 9f7629ec89ed3db0f9cd93ca33a5805e
@@ -36,5 +36,5 @@ stages:
       size: 32
     - path: model.pkl
       hash: md5
-      md5: 3cf5ed4634cba2a7495b6b2f7958e05c
+      md5: 83ca80a7a04a6c294c85115c2da77a61
       size: 525777
